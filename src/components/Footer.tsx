@@ -4,7 +4,7 @@ import { Pressable, Text, View } from 'react-native';
 
 export function Footer() {
   return (
-    <View className="w-full flex-row items-center justify-between px-8 py-4 border-t border-gray-200">
+    <View className="w-full flex-row items-center justify-between px-8 py-4 border-t border-gray-200 mb-6">
       
       <Link href="/" asChild>
         <Pressable className="items-center flex-1">

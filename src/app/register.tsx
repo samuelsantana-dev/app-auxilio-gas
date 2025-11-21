@@ -2,17 +2,17 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Link, useRouter } from "expo-router";
 import { useState } from "react";
-import { Alert, ScrollView, Text, View } from "react-native";
+import { Alert, Text, View } from "react-native";
 
+import CheckBox from "@/components/ui/Checkbox";
+import InputField from "@/components/ui/InputField";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import SocialButton from "@/components/ui/SocialButton";
 import AppleIcon from "src/assets/icons/apple.png";
 import EmailIcon from "src/assets/icons/email.png";
 import GoogleIcon from "src/assets/icons/google.png";
 import LockIcon from "src/assets/icons/lock.png";
 import UserIcon from "src/assets/icons/user.png";
-import CheckBox from "src/components/Checkbox";
-import InputField from "src/components/InputField";
-import PrimaryButton from "src/components/PrimaryButton";
-import SocialButton from "src/components/SocialButton";
 
 export default function CreateAccountScreen() {
   const [checked, setChecked] = useState(false);
@@ -64,7 +64,7 @@ export default function CreateAccountScreen() {
   };
 
   return (
-    <ScrollView className="flex-1 bg-white">
+    <View className="flex-1 bg-white">
       <Header />
       <View className="flex-1 px-6 py-12">
         
@@ -138,6 +138,6 @@ export default function CreateAccountScreen() {
       </View>
 
       <Footer />
-    </ScrollView>
+    </View>
   );
 }

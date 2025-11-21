@@ -5,8 +5,8 @@ import { Header } from 'src/components/Header';
 
 export default function AlertsScreen() {
   return (
-    <View className="flex-1 bg-gray-50">
-      <Header />
+    <View className="flex-1">
+        <Header />
       
       <ScrollView className="flex-1 px-6">
         <Text className="text-2xl font-bold text-gray-900 mt-6 mb-4">alerts e Notificações</Text>

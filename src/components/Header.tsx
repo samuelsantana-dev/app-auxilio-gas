@@ -9,7 +9,9 @@ interface HeaderProps {
 
 export function Header({ showBackButton = true, onBackPress, title = "Auxílio Gás" }: HeaderProps) {
   return (
-    <View className="w-full flex-row items-center justify-between px-4 py-4 bg-white">
+    <View className="pt-10 bg-white"> 
+      
+    <View className="w-full flex-row items-center justify-between px-4 py-4 pt-10 bg-white">
 
       <View className="flex-1 items-center mx-4">
         <Text className="text-xl font-bold text-gray-900 text-center">
@@ -23,6 +25,7 @@ export function Header({ showBackButton = true, onBackPress, title = "Auxílio G
       <View className="w-12 h-12 bg-gray-100 rounded-2xl flex justify-center items-center opacity-50">
         <Ionicons name="person" size={24} color="#6b7280"/>
       </View>
+    </View>
     </View>
   );
 }

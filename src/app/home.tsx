@@ -1,7 +1,6 @@
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import PrimaryButton from "@/components/PrimaryButton";
-import SecundayButton from "@/components/SecundayButton";
+import SecundayButton from "@/components/ui/SecundayButton";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 import { Link } from "expo-router";
 import { Image, Text, View } from "react-native";
 import Logo from "src/assets/images/icone-gas.png";
@@ -9,9 +8,7 @@ import Logo from "src/assets/images/icone-gas.png";
 export default function HomeScreen() {
   return (
     <View className="flex-1 bg-white">
-      <Header />
       <View className="flex-1 px-6 justify-center">
-        
         <View className="items-center mb-8">
           <Image
             source={Logo}
