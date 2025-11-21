@@ -1,15 +1,14 @@
 import { View } from "react-native";
+import '../style/style.css';
 import HomeScreen from "./home";
-import LoginScreen from "./login";
-import CreateAccountScreen from "./register";
 
 export default function Index() {
   return (
     <View>
          {/* <BackButton /> */}
       <HomeScreen />
-      <CreateAccountScreen />
-      <LoginScreen />
+      {/* <CreateAccountScreen /> */}
+      {/* <LoginScreen /> */}
     </View>
   );
 }
