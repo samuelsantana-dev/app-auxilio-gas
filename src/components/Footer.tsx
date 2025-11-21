@@ -13,24 +13,24 @@ export function Footer() {
         </Pressable>
       </Link>
     
-    <Link href="/beneficios" asChild>
+    <Link href="/benefits" asChild>
       <Pressable className="items-center flex-1">
         <Ionicons name="document-text" size={24} color="#9ca3af"/>
         <Text className="text-xs text-gray-500 mt-1">Benefícios</Text>
       </Pressable>
     </Link>
 
-      <Link href="/alertas" asChild>
+      <Link href="/alerts" asChild>
         <Pressable className="items-center flex-1">
           <Ionicons name="notifications" size={24} color="#9ca3af"/>
           <Text className="text-xs text-gray-500 mt-1">Alertas</Text>
         </Pressable>
       </Link>
 
-      <Link href="/perfil" asChild>
+      <Link href="/profile" asChild>
         <Pressable className="items-center flex-1">
           <Ionicons name="person" size={24} color="#9ca3af"/>
-          <Text className="text-xs text-gray-500 mt-1">Perfil</Text>
+          <Text className="text-xs text-gray-500 mt-1">profile</Text>
         </Pressable>
       </Link>
 

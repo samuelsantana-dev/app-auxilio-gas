@@ -46,14 +46,14 @@ export default function CreateAccountScreen() {
 
       if (response.ok) {
         Alert.alert("Sucesso", "Register realizado com sucesso!");
-        router.push('/perfil');
+        router.push('/profile');
       } else {
         Alert.alert("Erro", data.message || "Erro ao fazer Register");
       }
     } catch (error) {
       Alert.alert("Erro", "Não foi possível conectar ao servidor");
       console.log("Register mockado - Redirecionando...");
-      router.push('/perfil');
+      router.push('/profile');
     } finally {
       setLoading(false);
     }

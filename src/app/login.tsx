@@ -43,14 +43,14 @@ export default function LoginScreen() {
 
       if (response.ok) {
         Alert.alert("Sucesso", "Login realizado com sucesso!");
-        router.push('/perfil');
+        router.push('/profile');
       } else {
         Alert.alert("Erro", data.message || "Erro ao fazer login");
       }
     } catch (error) {
       Alert.alert("Erro", "Não foi possível conectar ao servidor");
       console.log("Login mockado - Redirecionando...");
-      router.push('/perfil');
+      router.push('/profile');
     } finally {
       setLoading(false);
     }

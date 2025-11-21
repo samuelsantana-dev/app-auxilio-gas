@@ -9,7 +9,7 @@ export default function AlertsScreen() {
       <Header />
       
       <ScrollView className="flex-1 px-6">
-        <Text className="text-2xl font-bold text-gray-900 mt-6 mb-4">Alertas e Notificações</Text>
+        <Text className="text-2xl font-bold text-gray-900 mt-6 mb-4">alerts e Notificações</Text>
         
         <View className="bg-yellow-50 rounded-2xl p-5 mb-4 border border-yellow-200">
           <View className="flex-row items-center">
