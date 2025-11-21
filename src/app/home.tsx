@@ -1,40 +1,52 @@
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import PrimaryButton from "@/components/PrimaryButton";
+import SecundayButton from "@/components/SecundayButton";
 import { Link } from "expo-router";
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import Logo from "src/assets/images/icone-gas.png";
 
 export default function HomeScreen() {
   return (
-    <View className="h-full w-full flex flex-col items-center justify-center" >
-
-      <Image
-        source={Logo}
-        className="w-32 h-32 mb-8"
-        resizeMode="contain"
-      />
-
-      <Text>
-        Bem-vindo ao  <Text className="text-3xl font-bold text-red-500 mt-1 mb-4">
-        Auxílio Gás
-      </Text>
-      </Text>
-
-      
-
-      <Text className="text-center text-gray-600 text-base px-6">
-        Explore todos os guias para o auxílio estudantil Vale Gas...
-      </Text>
-
-      <Link href="/login" asChild>
-        <TouchableOpacity className="mt-10 bg-red-700 w-64 py-4 rounded-full items-center">
-          <Text className="text-white font-semibold text-base">
-            Faça login para continuar →
+    <View className="flex-1 bg-white">
+      <Header />
+      <View className="flex-1 px-6 justify-center">
+        
+        <View className="items-center mb-8">
+          <Image
+            source={Logo}
+            className="w-32 h-2 mb-6"
+            resizeMode="contain"
+            style={{ maxWidth: 150, maxHeight: 300 }}
+          />
+          
+          <Text className="text-3xl font-bold text-red-500 text-center mb-2">
+            Auxílio Gás
           </Text>
-        </TouchableOpacity>
-      </Link>
+          
+          <Text className="text-lg text-gray-600 text-center">
+            Seu combustível para estudar
+          </Text>
+        </View>
 
-      <Link href="/register" className="mt-4">
-        <Text className="text-gray-700 underline">Criar Conta</Text>
-      </Link>
+        <View className="mb-8">
+          <Text className="text-base text-gray-700 text-center leading-6">
+            Explore todos os guias e benefícios do auxílio estudantil Vale Gás. 
+            Foque nos estudos sem preocupações.
+          </Text>
+        </View>
+
+        <View className="space-y-4">
+          <Link href="/login" asChild>
+            <PrimaryButton title="Fazer Login" />
+          </Link>
+
+          <Link href="/register" asChild>
+              <SecundayButton title="Criar Conta" />
+          </Link>
+        </View>
+      </View>
+      <Footer />
     </View>
   );
 }

@@ -1,25 +1,28 @@
-import { Pressable, Text, View } from 'react-native';
-import { Feather, Ionicons } from 'srcexpo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+import { Text, View } from 'react-native';
 
-export function Header() {
- return (
-   <View className="w-full flex flex-row items-center justify-between">
-      <Pressable className="w-10 h-10 bg-white rounded-full flex justify-center items-center">
-        <Ionicons name="menu" size={20} color="#121212"/>
-      </Pressable>
+interface HeaderProps {
+  showBackButton?: boolean;
+  onBackPress?: () => void;
+  title?: string;
+}
 
-      <View className="flex flex-col items-center justify-center">
-        <Text className="text-center text-sm text-slate-800">Localização</Text>
+export function Header({ showBackButton = true, onBackPress, title = "Auxílio Gás" }: HeaderProps) {
+  return (
+    <View className="w-full flex-row items-center justify-between px-4 py-4 bg-white">
 
-        <View className="flex-row items-center justify-center gap-1">
-          <Feather name="map-pin" size={14} color="#FF0000" />
-          <Text className="text-lg font-bold">Campo Grande</Text>
-        </View>
+      <View className="flex-1 items-center mx-4">
+        <Text className="text-xl font-bold text-gray-900 text-center">
+          {title}
+        </Text>
+        <Text className="text-sm text-gray-500 mt-1">
+          Seu combustível para estudar
+        </Text>
       </View>
 
-      <Pressable className="w-10 h-10 bg-white rounded-full flex justify-center items-center">
-        <Feather name="bell" size={20} color="#121212"/>
-      </Pressable>
-  </View>
+      <View className="w-12 h-12 bg-gray-100 rounded-2xl flex justify-center items-center opacity-50">
+        <Ionicons name="person" size={24} color="#6b7280"/>
+      </View>
+    </View>
   );
 }
