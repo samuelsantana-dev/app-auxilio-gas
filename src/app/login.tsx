@@ -1,3 +1,4 @@
+import { AlertComponent } from "@/components/Alert";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import CheckBox from "@/components/ui/Checkbox";
@@ -17,11 +18,18 @@ export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertInfo, setAlertInfo] = useState({ variant: 'error', title: '', message: '' });
   const router = useRouter();
 
+  const showCustomAlert = (variant: 'error' | 'success', title: string, message: string) => {
+    setAlertInfo({ variant, title, message });
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 5000);
+  };
   const handleLogin = async () => {
     if (!email || !password) {
-      Alert.alert("Erro", "Por favor, preencha todos os campos");
+      showCustomAlert('error', 'Erro', 'Por favor, preencha todos os campos');
       return;
     }
 
@@ -63,6 +71,15 @@ export default function LoginScreen() {
   return (
     <View className="flex-1 bg-white">
         <Header />
+        {showAlert && (
+          <View className="absolute top-20 left-6 right-6 z-50">
+            <AlertComponent 
+              variant={alertInfo.variant as 'error' | 'success'} 
+              title={alertInfo.title} 
+              message={alertInfo.message} 
+            />
+          </View>
+        )}
       <View className="flex-1 px-6 py-12">
         
         <View className="items-center mb-8">
